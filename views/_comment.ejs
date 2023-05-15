@@ -1,0 +1,10 @@
+<li>
+    <p>
+        <%= comment.content %> by <%= comment.user.name %>
+                <% if (locals.user && locals.user.id==comment.user.id){ %>
+                    <small>
+                        <a href="/comments/destroy/<%= comment.id %>">🗑️</a>
+                    </small>
+                    <% } %>
+    </p>
+</li>
